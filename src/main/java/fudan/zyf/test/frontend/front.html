@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>front</title>
+</head>
+<body>
+
+<form name="myForm">
+    name: <input type="text" id="name" />
+    password: <input type="password" id="pass" />
+    <button type="button" onclick="func()">提交</button>
+
+</form>
+
+
+<script type="text/javascript">
+    function func() {
+        let name = document.getElementById("name").value;
+        let pass = document.getElementById("pass").value;
+        let xml = new XMLHttpRequest();
+        xml.open("GET","localhost:8012/test/red");
+        xml.send(null);
+        console.log(xml.responseText);
+    }
+
+</script>
+</body>
+</html>
